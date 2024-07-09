@@ -15,4 +15,6 @@ return [
         ],
     ],
     'debug' => env('EPP_DEBUG', false),
+    'verify_peer' => env('EPP_VERIFY_PEER', false),
+    'verify_peer_name' => env('EPP_VERIFY_PEER_NAME', false),
 ];

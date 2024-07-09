@@ -56,7 +56,7 @@ class XmlHelper
      *
      * @return DOMElement
      */
-    public function createElement($name, $value = null): DOMElement
+    public function createElement($name, $value = ''): DOMElement
     {
         return $this->document->createElement($name, $value);
     }

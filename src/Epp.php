@@ -104,7 +104,7 @@ class Epp
      */
     public function start()
     {
-        $ctx = stream_context_create();
+        $ctx = stream_context_create(['ssl' => ['verify_peer' => config('epp.verify_peer'), 'verify_peer_name' => config('epp.verify_peer_name')]]);
 
         $this->socket = stream_socket_client(
             sprintf('ssl://%s:%d', $this->hostname, $this->port),
